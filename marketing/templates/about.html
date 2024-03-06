@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- about section -->
+
+  <section class="about_section">
+    <div class="container">
+      {% for i in object_list %}
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{i.image.url}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                {{i.title}}
+              </h2>
+            </div>
+            <p>
+             {{i.sub_title}}
+            </p>
+          </div>
+        </div>
+       
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
