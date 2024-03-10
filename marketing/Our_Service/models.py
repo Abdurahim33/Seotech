@@ -1,5 +1,5 @@
 from django.db import models
-from About.abstract import BaseModel, OrderModel
+from Our_Service.abstract import BaseModel, OrderModel
 
 class Homepage(models.Model):
     title = models.CharField(max_length=100)

@@ -31,7 +31,7 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'About',
+    'about',
     'Contact',
     'Home',
     'Our_Service',

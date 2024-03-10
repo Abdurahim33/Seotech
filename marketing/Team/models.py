@@ -1,5 +1,5 @@
 from django.db import models
-from About.abstract import BaseModel, OrderModel
+from Our_Service.abstract import BaseModel, OrderModel
 
 class Homepage_Team(models.Model):
     title = models.CharField(max_length=50)
@@ -35,7 +35,7 @@ class Homepage_Testimonial(models.Model):
     sub_title = models.CharField(max_length=100)
 
     def __str__(self) -> str:
-        return self.name
+        return self.title
     
 
     class Meta:

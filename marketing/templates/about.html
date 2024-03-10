@@ -5,11 +5,13 @@
 
   <section class="about_section">
     <div class="container">
-      {% for i in object_list %}
+     
       <div class="row">
+      {% for i in object_list %}
         <div class="col-md-6">
           <div class="img-box">
             <img src="{{i.image.url}}" alt="">
+            <h1></h1>
           </div>
         </div>
         <div class="col-md-6">
@@ -20,13 +22,13 @@
               </h2>
             </div>
             <p>
-             {{i.sub_title}}
+             {{object.sub_title}}
             </p>
           </div>
         </div>
-       
-      </div>
       {% endfor %}
+      </div>
+      
     </div>
   </section>
 {% endblock %}

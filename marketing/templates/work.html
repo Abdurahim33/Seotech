@@ -1,0 +1,52 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- work section -->
+<section class="work_section layout_padding">
+    <div class="container">
+      
+      <div class="heading_container">
+        {% for i in object_list %}
+        <h2>
+          {{i.title}}
+        </h2>
+        <p>
+         {{i.sub_title}}
+        </p>
+        {% endfor %}
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail_container">
+            {% for department in departments %}
+            <div class="box b-1">
+              <div class="top-box">
+                <div class="icon-box">
+                  <img src="{{department.icon.url}}" alt="">
+                </div>
+                <h5>
+                {{department.title}}
+                </h5>
+              </div>
+              <div class="bottom-box">
+                <p>
+                  {{department.sub_title}}
+                </p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/work-img.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end work section -->
+  {% endblock %}
